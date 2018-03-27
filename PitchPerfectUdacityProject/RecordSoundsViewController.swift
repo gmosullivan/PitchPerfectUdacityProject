@@ -13,23 +13,41 @@ class RecordSoundsViewController: UIViewController {
     @IBOutlet weak var recordSoundsButton: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var stopRecordingButton: UIButton!
+    
+    var isRecording = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        configureUI()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK:- UI Buttons
 
     @IBAction func recordSounds() {
-        print("record button was pressed")
+        isRecording = true
+        configureUI()
     }
     
     @IBAction func stopRecording() {
-        print("stop button was pressed")
+        isRecording = false
+        configureUI()
+    }
+    
+    //MARK:- Functions
+    
+    func configureUI() {
+        if isRecording {
+            recordSoundsButton.isEnabled = false
+            stopRecordingButton.isEnabled = true
+        } else {
+            recordSoundsButton.isEnabled = true
+            stopRecordingButton.isEnabled = false
+        }
     }
 
 }
