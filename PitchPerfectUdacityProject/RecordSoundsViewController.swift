@@ -44,9 +44,11 @@ class RecordSoundsViewController: UIViewController {
         if isRecording {
             recordSoundsButton.isEnabled = false
             stopRecordingButton.isEnabled = true
+            statusLabel.text = "Recording in Progress"
         } else {
             recordSoundsButton.isEnabled = true
             stopRecordingButton.isEnabled = false
+            statusLabel.text = "Tap to record"
         }
     }
 
