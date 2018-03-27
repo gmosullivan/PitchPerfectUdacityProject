@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class RecordSoundsViewController: UIViewController {
+class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBOutlet weak var recordSoundsButton: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
@@ -52,6 +52,12 @@ class RecordSoundsViewController: UIViewController {
             stopRecordingButton.isEnabled = false
             statusLabel.text = "Tap to record"
         }
+    }
+    
+    //MARK:- Audio Recorder Delegate
+    
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        print("did finish recording")
     }
 
 }
