@@ -32,8 +32,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func recordSounds() {
         
-        isRecording = true
-        configureUI()
+        
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
@@ -42,22 +41,26 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let session = AVAudioSession.sharedInstance()
         
         try! session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
-        
         try! audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
         
+        isRecording = true
         audioRecorder.delegate = self
         audioRecorder.isMeteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
+        configureUI()
         
     }
     
     @IBAction func stopRecording() {
         
+        let session = AVAudioSession.sharedInstance()
+        
+        try! session.setActive(false)
+        
         isRecording = false
+        audioRecorder.stop()
         configureUI()
-        
-        
         
     }
     
