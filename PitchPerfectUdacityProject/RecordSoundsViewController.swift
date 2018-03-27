@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RecordSoundsViewController: UIViewController {
     
@@ -15,6 +16,7 @@ class RecordSoundsViewController: UIViewController {
     @IBOutlet weak var stopRecordingButton: UIButton!
     
     var isRecording = false
+    var audioRecorder: AVAudioRecorder!
 
     override func viewDidLoad() {
         super.viewDidLoad()
