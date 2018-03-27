@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="435" y="30.633802816901408"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="dYh-wG-0zm">
             <objects>
-                <viewController id="0wF-0y-wgB" sceneMemberID="viewController">
+                <viewController id="0wF-0y-wgB" customClass="PlaySoundsViewController" customModule="PitchPerfectUdacityProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jJn-pR-DiV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
