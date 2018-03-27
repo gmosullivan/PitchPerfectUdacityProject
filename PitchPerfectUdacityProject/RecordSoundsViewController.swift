@@ -83,6 +83,12 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         print("did finish recording")
     }
+    
+    //MARK:- Segue
+    
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        <#code#>
+    }
 
 }
 
