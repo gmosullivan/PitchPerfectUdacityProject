@@ -21,6 +21,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6U-LR-oCp">
                                 <rect key="frame" x="83" y="207" width="155" height="155"/>
                                 <state key="normal" image="Record"/>
+                                <connections>
+                                    <action selector="recordSounds" destination="BYZ-38-t0r" eventType="touchUpInside" id="pUq-JG-jli"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMk-tG-cjd">
                                 <rect key="frame" x="107" y="382" width="106.5" height="20.5"/>
@@ -35,6 +38,9 @@
                                     <constraint firstAttribute="width" constant="66" id="ZwF-OS-oZe"/>
                                 </constraints>
                                 <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopRecording" destination="BYZ-38-t0r" eventType="touchUpInside" id="MxU-Fg-L9P"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,6 +54,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="recordSoundsButton" destination="N6U-LR-oCp" id="vHl-gb-6KV"/>
+                        <outlet property="statusLabel" destination="pMk-tG-cjd" id="Fog-CK-AnG"/>
+                        <outlet property="stopRecordingButton" destination="YSY-2i-Ymu" id="7v6-Vx-CbD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

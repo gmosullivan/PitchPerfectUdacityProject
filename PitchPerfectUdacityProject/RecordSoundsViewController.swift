@@ -9,6 +9,10 @@
 import UIKit
 
 class RecordSoundsViewController: UIViewController {
+    
+    @IBOutlet weak var recordSoundsButton: UIButton!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var stopRecordingButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +24,13 @@ class RecordSoundsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func recordSounds() {
+        print("record button was pressed")
+    }
+    
+    @IBAction func stopRecording() {
+        print("stop button was pressed")
+    }
 
 }
 
