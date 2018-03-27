@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,9 +15,37 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="PitchPerfectUdacityProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6U-LR-oCp">
+                                <rect key="frame" x="83" y="207" width="155" height="155"/>
+                                <state key="normal" image="Record"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMk-tG-cjd">
+                                <rect key="frame" x="107" y="382" width="106.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSY-2i-Ymu">
+                                <rect key="frame" x="127" y="422.5" width="66" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="X0Y-B3-Lp7"/>
+                                    <constraint firstAttribute="width" constant="66" id="ZwF-OS-oZe"/>
+                                </constraints>
+                                <state key="normal" image="Stop"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pMk-tG-cjd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4IG-Hh-ge8"/>
+                            <constraint firstItem="YSY-2i-Ymu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8v3-23-f2M"/>
+                            <constraint firstItem="N6U-LR-oCp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JMM-FN-bxY"/>
+                            <constraint firstItem="pMk-tG-cjd" firstAttribute="top" secondItem="N6U-LR-oCp" secondAttribute="bottom" constant="20" id="KVW-xb-Xu0"/>
+                            <constraint firstItem="N6U-LR-oCp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jEg-UJ-Zha"/>
+                            <constraint firstItem="YSY-2i-Ymu" firstAttribute="top" secondItem="pMk-tG-cjd" secondAttribute="bottom" constant="20" id="jdj-dY-Eda"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -25,4 +53,8 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Record" width="155" height="155"/>
+        <image name="Stop" width="155" height="155"/>
+    </resources>
 </document>
