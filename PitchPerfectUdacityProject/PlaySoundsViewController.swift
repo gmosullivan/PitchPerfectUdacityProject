@@ -12,6 +12,10 @@ import AVFoundation
 class PlaySoundsViewController: UIViewController {
 
     var recordedAudioURL: URL!
+    var audioFile: AVAudioFile!
+    var audioEngine: AVAudioEngine!
+    var audioPlayerNode: AVAudioPlayerNode!
+    var stopTimer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
