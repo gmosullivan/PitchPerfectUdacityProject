@@ -83,49 +83,73 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x08-Pf-LGM">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="100"/>
                                                 <state key="normal" image="HalfSpeed"/>
+                                                <connections>
+                                                    <action selector="setButtonEffect:" destination="0wF-0y-wgB" eventType="touchUpInside" id="UZD-W7-SWw"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJo-fT-jxS">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJo-fT-jxS">
                                                 <rect key="frame" x="160" y="0.0" width="160" height="100"/>
                                                 <state key="normal" image="DoubleSpeed"/>
+                                                <connections>
+                                                    <action selector="setButtonEffect:" destination="0wF-0y-wgB" eventType="touchUpInside" id="0qb-70-LbT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Erz-cf-mza">
                                         <rect key="frame" x="0.0" y="100" width="320" height="100"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzt-MJ-hlE">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzt-MJ-hlE">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="100"/>
                                                 <state key="normal" image="ThirdSpeed"/>
+                                                <connections>
+                                                    <action selector="setButtonEffect:" destination="0wF-0y-wgB" eventType="touchUpInside" id="wda-mJ-uQc"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e59-XZ-rv6">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e59-XZ-rv6">
                                                 <rect key="frame" x="160" y="0.0" width="160" height="100"/>
                                                 <state key="normal" image="TripleSpeed"/>
+                                                <connections>
+                                                    <action selector="setButtonEffect:" destination="0wF-0y-wgB" eventType="touchUpInside" id="vGo-6A-cEL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qZ1-TP-VUW">
                                         <rect key="frame" x="0.0" y="200" width="320" height="100"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7d-ck-Wb1">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7d-ck-Wb1">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="100"/>
                                                 <state key="normal" image="LowPitch"/>
+                                                <connections>
+                                                    <action selector="setButtonEffect:" destination="0wF-0y-wgB" eventType="touchUpInside" id="qQG-Ne-qXw"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syR-qU-iGT">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syR-qU-iGT">
                                                 <rect key="frame" x="160" y="0.0" width="160" height="100"/>
                                                 <state key="normal" image="HighPitch"/>
+                                                <connections>
+                                                    <action selector="setButtonEffect:" destination="0wF-0y-wgB" eventType="touchUpInside" id="FGY-ey-lLx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hIk-FX-Ohs">
                                         <rect key="frame" x="0.0" y="300" width="320" height="100"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeX-ru-8cx">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeX-ru-8cx">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="100"/>
                                                 <state key="normal" image="Echo"/>
+                                                <connections>
+                                                    <action selector="setButtonEffect:" destination="0wF-0y-wgB" eventType="touchUpInside" id="kxj-Y2-Sh6"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cq5-EV-MST">
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cq5-EV-MST">
                                                 <rect key="frame" x="160" y="0.0" width="160" height="100"/>
                                                 <state key="normal" image="Reverb"/>
+                                                <connections>
+                                                    <action selector="setButtonEffect:" destination="0wF-0y-wgB" eventType="touchUpInside" id="TSP-qD-rdf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

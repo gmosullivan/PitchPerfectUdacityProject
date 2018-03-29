@@ -17,8 +17,14 @@ class PlaySoundsViewController: UIViewController {
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
     
+    enum ButtonType: Int { case halfSpeed = 0, doubleSpeed, thirdSpeed, tripleSpeed, lowPitch, highPitch, echo, reverb }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func setButtonEffect (_ sender: UIButton) {
+        print(sender.tag)
     }
 
 }
