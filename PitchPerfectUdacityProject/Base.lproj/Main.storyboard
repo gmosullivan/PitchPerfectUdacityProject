@@ -188,6 +188,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mqc-6N-ufZ"/>
                     </view>
+                    <connections>
+                        <outlet property="doubleSpeedButton" destination="pJo-fT-jxS" id="doF-Zy-amD"/>
+                        <outlet property="echoButton" destination="yeX-ru-8cx" id="vf5-jt-wOL"/>
+                        <outlet property="halfSpeedButton" destination="x08-Pf-LGM" id="8Oi-vw-Mmr"/>
+                        <outlet property="highPitchButton" destination="syR-qU-iGT" id="GrL-vO-AUH"/>
+                        <outlet property="lowPitchButton" destination="p7d-ck-Wb1" id="vjN-Js-mhz"/>
+                        <outlet property="reverbButton" destination="cq5-EV-MST" id="PT6-Vt-bY4"/>
+                        <outlet property="thirdSpeedButton" destination="zzt-MJ-hlE" id="SJy-HW-hfN"/>
+                        <outlet property="tripleSpeedButton" destination="e59-XZ-rv6" id="ZgG-Pt-ePW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8JB-Nv-cSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

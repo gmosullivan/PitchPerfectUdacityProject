@@ -159,12 +159,26 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     }
     
     func setPlayButtons(_ enabled: Bool) {
-  //      slowButton.isEnabled = enabled
-  //      fastButton.isEnabled = enabled
-  //      highPitchButton.isEnabled = enabled
-  //      lowPitchButton.isEnabled = enabled
-  //      echoButton.isEnabled = enabled
-  //      reverbButton.isEnabled = enabled
+        if rate != 1 {
+            halfSpeedButton.isEnabled = false
+            doubleSpeedButton.isEnabled = false
+            thirdSpeedButton.isEnabled = false
+            tripleSpeedButton.isEnabled = false
+        } else {
+            halfSpeedButton.isEnabled = true
+            doubleSpeedButton.isEnabled = true
+            thirdSpeedButton.isEnabled = true
+            tripleSpeedButton.isEnabled = true
+        }
+        if pitch != 0 {
+            lowPitchButton.isEnabled = false
+            highPitchButton.isEnabled = false
+        } else {
+            lowPitchButton.isEnabled = enabled
+            highPitchButton.isEnabled = enabled
+        }
+        echoButton.isEnabled = !echo
+        reverbButton.isEnabled = !reverb
     }
     
     func showAlert(_ title: String, message: String) {

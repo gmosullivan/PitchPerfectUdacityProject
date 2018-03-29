@@ -11,6 +11,15 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
 
+    @IBOutlet weak var halfSpeedButton: UIButton!
+    @IBOutlet weak var doubleSpeedButton: UIButton!
+    @IBOutlet weak var thirdSpeedButton: UIButton!
+    @IBOutlet weak var tripleSpeedButton: UIButton!
+    @IBOutlet weak var lowPitchButton: UIButton!
+    @IBOutlet weak var highPitchButton: UIButton!
+    @IBOutlet weak var echoButton: UIButton!
+    @IBOutlet weak var reverbButton: UIButton!
+    
     var recordedAudioURL: URL!
     var audioFile: AVAudioFile!
     var audioEngine: AVAudioEngine!
@@ -47,10 +56,12 @@ class PlaySoundsViewController: UIViewController {
             case .reverb:
                 reverb = true
         }
+        configureUI(.notPlaying)
     }
     
     @IBAction func playButtonPressed() {
         print("\(rate), \(pitch), \(echo), \(reverb)")
+        configureUI(.playing)
     }
 
 }
