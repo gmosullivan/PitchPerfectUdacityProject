@@ -170,6 +170,9 @@
                                     <constraint firstAttribute="height" constant="51" id="SOS-YX-B84"/>
                                 </constraints>
                                 <state key="normal" image="Play"/>
+                                <connections>
+                                    <action selector="playButtonPressed" destination="0wF-0y-wgB" eventType="touchUpInside" id="dwB-mZ-MAT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
