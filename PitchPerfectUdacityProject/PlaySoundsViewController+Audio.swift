@@ -128,6 +128,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
             stopTimer.invalidate()
         }
         
+        resetEffects()
         configureUI(.notPlaying)
         
         if let audioEngine = audioEngine {
@@ -150,35 +151,43 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     func configureUI(_ playState: PlayingState) {
         switch(playState) {
         case .playing:
-            setPlayButtons(false)
-  //          stopButton.isEnabled = true
-        case .notPlaying:
-            setPlayButtons(true)
-  //          stopButton.isEnabled = false
-        }
-    }
-    
-    func setPlayButtons(_ enabled: Bool) {
-        if rate != 1 {
             halfSpeedButton.isEnabled = false
             doubleSpeedButton.isEnabled = false
             thirdSpeedButton.isEnabled = false
             tripleSpeedButton.isEnabled = false
-        } else {
-            halfSpeedButton.isEnabled = true
-            doubleSpeedButton.isEnabled = true
-            thirdSpeedButton.isEnabled = true
-            tripleSpeedButton.isEnabled = true
-        }
-        if pitch != 0 {
             lowPitchButton.isEnabled = false
             highPitchButton.isEnabled = false
-        } else {
-            lowPitchButton.isEnabled = enabled
-            highPitchButton.isEnabled = enabled
+            echoButton.isEnabled = false
+            reverbButton.isEnabled = false
+        case .notPlaying:
+            if rate != 1 {
+                halfSpeedButton.isEnabled = false
+                doubleSpeedButton.isEnabled = false
+                thirdSpeedButton.isEnabled = false
+                tripleSpeedButton.isEnabled = false
+            } else {
+                halfSpeedButton.isEnabled = true
+                doubleSpeedButton.isEnabled = true
+                thirdSpeedButton.isEnabled = true
+                tripleSpeedButton.isEnabled = true
+            }
+            if pitch != 0 {
+                lowPitchButton.isEnabled = false
+                highPitchButton.isEnabled = false
+            } else {
+                lowPitchButton.isEnabled = true
+                highPitchButton.isEnabled = true
+            }
+            echoButton.isEnabled = !echo
+            reverbButton.isEnabled = !reverb
         }
-        echoButton.isEnabled = !echo
-        reverbButton.isEnabled = !reverb
+    }
+    
+    func resetEffects() {
+        rate = 1
+        pitch = 0
+        echo = false
+        reverb = false
     }
     
     func showAlert(_ title: String, message: String) {

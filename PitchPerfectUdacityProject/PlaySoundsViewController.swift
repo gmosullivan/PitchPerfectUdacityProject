@@ -60,8 +60,12 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playButtonPressed() {
-        print("\(rate), \(pitch), \(echo), \(reverb)")
         configureUI(.playing)
+    }
+    
+    @IBAction func stopButtonPressed() {
+        resetEffects()
+        configureUI(.notPlaying)
     }
 
 }

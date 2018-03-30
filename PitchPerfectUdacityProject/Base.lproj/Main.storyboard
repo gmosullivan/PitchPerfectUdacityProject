@@ -162,6 +162,9 @@
                                     <constraint firstAttribute="height" constant="60" id="YCk-L5-HoG"/>
                                 </constraints>
                                 <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopButtonPressed" destination="0wF-0y-wgB" eventType="touchUpInside" id="hqD-hy-xqc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQL-Oc-hxi">
                                 <rect key="frame" x="175.5" y="476" width="51" height="51"/>
